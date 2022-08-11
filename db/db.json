@@ -22,13 +22,6 @@
         "admin"
       ],
       "id": 3
-    },
-    {
-      "name": "",
-      "permissions": [
-        ""
-      ],
-      "id": 4
     }
   ],
   "produtos": [
@@ -126,6 +119,41 @@
       "password": "12345",
       "profile": "admin",
       "id": 5
+    },
+    {
+      "name": "antonio dias ",
+      "email": "tonho@",
+      "password": "123456",
+      "profile": "admin",
+      "id": 6
+    },
+    {
+      "name": "fsdf",
+      "email": "fdsfd",
+      "password": "fdsfsdf",
+      "profile": "fsdfsdf",
+      "id": 7
+    },
+    {
+      "name": "fsdf",
+      "email": "fdsfd",
+      "password": "fdsfsdf",
+      "profile": "fsdfsdf",
+      "id": 8
+    },
+    {
+      "name": "marcos dias",
+      "email": "maxwell@",
+      "password": "12334",
+      "profile": "12334",
+      "id": 9
+    },
+    {
+      "name": "marcos dias",
+      "email": "maxwell@",
+      "password": "12334",
+      "profile": "12334",
+      "id": 10
     }
   ],
   "vehicles": [
@@ -172,27 +200,6 @@
       "cpf": "528.521.965-23",
       "sallary": "1.212,00",
       "created_in": "01/09/2022"
-    },
-    {
-      "name": "Luana Martins",
-      "cpf": "852.654",
-      "salario": "1400",
-      "data": "12",
-      "id": 3
-    },
-    {
-      "name": "",
-      "cpf": "025.985",
-      "salario": "1500",
-      "data": "05",
-      "id": 4
-    },
-    {
-      "name": "Jose Leao",
-      "cpf": "056.654",
-      "salario": "1500",
-      "data": "05",
-      "id": 5
     }
   ]
 }
