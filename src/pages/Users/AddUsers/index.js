@@ -1,6 +1,5 @@
 import {useState} from "react";
-import FormAddUsers from "../../../components/FormAddUsers"
-import Button from '@mui/material/Button';
+import {Button,TextField} from '@mui/material';
 
 export default function AddUser(){
     const [name, setName]= useState('');
@@ -9,20 +8,20 @@ export default function AddUser(){
     const [tipouser, setTipoUser]= useState('');
 
     const handleName = (event) =>{
-        setName(event.target.name);
+        setName(event.target.value);
+        console.log(handleName);
     }
     const handleEmail = (event) =>{
-        setEmail(event.target.email);
+        setEmail(event.target.value);
     }
     const handleSenha = (event) =>{
-        setSenha(event.target.senha);
+        setSenha(event.target.value);
     }
     const handleTipoUsers = (event) =>{
-        setTipoUser(event.target.tipouser);
+        setTipoUser(event.target.value);
     }
-
     const save = () => {
-        fetch('http://localhost:9000/usuarios',{
+        fetch('http://localhost:9000/users',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,18 +32,21 @@ export default function AddUser(){
                 password:senha,
                 profile:tipouser
             })
-        })
+        });
+        alert('Pronto');
     }
 
 
     return(
         <>
             <h1 align="center">- Novo Usuario -</h1>
-            <FormAddUsers onChange={handleName} label="Nome" />
-            <FormAddUsers onChange={handleEmail} label="Email" />
-            <FormAddUsers onChange={handleSenha} label="Senha" />
-            <FormAddUsers onChange={handleTipoUsers} label="Tipo Usuario" />
-            <Button onChange={save}>Enviar</Button>
+           <form>
+            <TextField onChange={handleName}  label="Nome" fullWidth />
+            <TextField onChange={handleEmail} label="Email" fullWidth/>
+            <TextField onChange={handleSenha} label="Senha" fullWidth/>
+            <TextField onChange={handleTipoUsers} label="Tipo Usuario" fullWidth/>
+            <Button onClick={save} fullWidth variant="contained">Salvar</Button>
+            </form>
         </>
     );
 }
