@@ -1,11 +1,13 @@
 import {useState} from "react";
-import {Button,TextField} from '@mui/material';
+import {Button,Divider,TextField} from '@mui/material';
+
 
 export default function AddUser(){
     const [name, setName]= useState('');
     const [email, setEmail]= useState('');
     const [senha, setSenha]= useState('');
     const [tipouser, setTipoUser]= useState('');
+   
 
     const handleName = (event) =>{
         setName(event.target.value);
@@ -19,6 +21,9 @@ export default function AddUser(){
     }
     const handleTipoUsers = (event) =>{
         setTipoUser(event.target.value);
+        
+  
+
     }
     const save = () => {
         fetch('http://localhost:9000/users',{
@@ -33,13 +38,17 @@ export default function AddUser(){
                 profile:tipouser
             })
         });
-        alert('Pronto');
+
+        alert("Usuario inserido com Sucesso !!")
+       
+       
     }
 
 
     return(
         <>
             <h1 align="center">- Novo Usuario -</h1>
+            <Divider/>
            <form>
             <TextField onChange={handleName}  label="Nome" fullWidth />
             <TextField onChange={handleEmail} label="Email" fullWidth/>
@@ -47,6 +56,7 @@ export default function AddUser(){
             <TextField onChange={handleTipoUsers} label="Tipo Usuario" fullWidth/>
             <Button onClick={save} fullWidth variant="contained">Salvar</Button>
             </form>
+           
         </>
     );
 }
