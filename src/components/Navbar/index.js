@@ -116,6 +116,7 @@ export default function Navbar() {
         <Toolbar>
 
           <IconButton
+            data-cy="menu"
             onClick={handleMenu}
             size="large"
             edge="start"
